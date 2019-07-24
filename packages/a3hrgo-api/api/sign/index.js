@@ -18,7 +18,6 @@ module.exports.register = async (server) => {
     }
     , async handler(request, h) {
       return sign(request.payload)
-        // .then((response) => response)
         .catch((err) => {
           console.error(err);
           return err;
