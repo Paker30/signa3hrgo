@@ -22,6 +22,8 @@ RUN chown -R $USER:$USER /home/$USER
 
 USER $USER
 
+ENV NODE_ENV PROD
+
 # Expose app port
 EXPOSE 8000
 

@@ -1,21 +1,18 @@
 'use strict';
 
 const Puppeteer = require('puppeteer');
-const { SIGN_URI } = require('../../config/env.js');
+const { SIGN_URI, PUPPETEER_CONFIG } = require('../../config/env.js');
+const puppeteerConfig = process.env.NODE_ENV === 'PROD' ? PUPPETEER_CONFIG.PROD : PUPPETEER_CONFIG.DEVELOP;
+console.log('NODE_ENV', process.env.NODE_ENV);
 
 const sign = async ({ user, password }) => {
-  const browser = Puppeteer.launch({
-    executablePath: '/usr/bin/google-chrome-unstable'
-    , args: [
-      '--disable-dev-shm-usage'
-      , '--no-sandbox'
-    ]
-  }).catch((err) => {
+  const browser = await Puppeteer.launch(puppeteerConfig)
+    .catch((err) => {
 
-    console.log('FATAL - Unable to launch puppeteer');
-    console.dir(err, { depth: 4 });
-    process.exit(111);
-  });
+      console.log('FATAL - Unable to launch puppeteer');
+      console.dir(err, { depth: 4 });
+      process.exit(111);
+    });
 
   const page = await browser.newPage();
 

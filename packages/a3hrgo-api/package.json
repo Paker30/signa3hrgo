@@ -5,11 +5,11 @@
   "description": "api to sing in into a3hrgo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-    , "start-dev": "nodemon --inspect index.js"
-    , "start": "node index.js"
-    , "build": "docker build . -t a3hrgo-api:latest -t a3hrgo-api:${npm_package_version}"
-    , "build-base": "docker build -f base.dockerfile -t node-puppeter-base:latest ."
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev": "nodemon --inspect index.js",
+    "start": "node index.js",
+    "build": "docker build . -t a3hrgo-api:latest -t a3hrgo-api:${npm_package_version}",
+    "build-base": "docker build -f base.dockerfile -t node-puppeter-base:latest ."
   },
   "repository": {
     "type": "git",
