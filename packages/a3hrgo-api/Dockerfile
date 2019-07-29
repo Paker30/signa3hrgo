@@ -3,6 +3,7 @@ FROM node-puppeter-base:latest
 LABEL maintainer "Fran <morenocfrancisco86@gmail.com>"
 
 ENV USER pptruser
+
 WORKDIR /home/$USER
 COPY package.json package.json
 
@@ -25,7 +26,7 @@ USER $USER
 ENV NODE_ENV PROD
 
 # Expose app port
-EXPOSE 8000
+EXPOSE $PORT
 
 
 CMD ["node", "index.js" ]
