@@ -1,6 +1,6 @@
 {
   "name": "a3hrgo-cli",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Commnad line client to sign in and out of a3hrgo",
   "main": "src/index.js",
   "scripts": {
