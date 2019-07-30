@@ -1,0 +1,35 @@
+{
+  "name": "a3hrgo-cli",
+  "version": "0.1.0",
+  "description": "Commnad line client to sign in and out of a3hrgo",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "a3hrgo-cli": "src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paker30/signa3hrgo.git"
+  },
+  "keywords": [
+    "a3hrgo"
+  ],
+  "bugs": {
+    "url": "https://github.com/Paker30/signa3hrgo/issues"
+  },
+  "engines": {
+    "node": ">8.9.0"
+  },
+  "author": "paker <morenocfrancisco86@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "docopt": "^0.6.2",
+    "dotenv": "^8.0.0",
+    "lodash": "^4.17.15",
+    "preferences": "^1.0.2"
+  }
+}
